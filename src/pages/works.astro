@@ -1,0 +1,53 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import { SITE_TITLE } from "../config";
+import WorksCard from "src/components/WorksCard.astro";
+---
+
+<PageLayout>
+  <PageMeta title={`${SITE_TITLE} | Works  `} slot="meta" />
+  <Fragment slot="main">
+    <div class="mb-6">
+      <h1
+        class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
+      >
+        <span
+          class="
+              bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
+              from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+          "
+        >
+          Yaptığımız İşlerden Bazıları
+        </span>
+      </h1>
+      <!-- <p class="text-2xl pb-4">Web Developer. OSS Wizard. Blogger.</p> -->
+    </div>
+    <div class="works-grid">
+      <WorksCard title="TURKISH TECHNOLOGY"  img="/tt-web.png" workLink="https://turkishtechnology.com/" width="width" person="Muhammet Celepci" personLink="https://www.linkedin.com/in/mcelepci/"/>
+      <WorksCard title="TURKISH TECHNOLOGY CAREERS" img="/tt-career.png" workLink="https://careers.turkishtechnology.com/" width="width" person="Muhammet Celepci" personLink="https://www.linkedin.com/in/mcelepci/"/>
+      <WorksCard title="Nokta Global" img="/noktaglobal.png" workLink="https://noktaglobal.com/"  />
+      <WorksCard title="Nokta Homes" img="/noktahomes.png" workLink="https://noktahomes.com/"  />
+      <WorksCard title="MyThreeDogs" img="/vpc.png" workLink="https://creainc.us/"  />
+      <WorksCard title="crea" img="/crea.png" workLink="https://creainc.us/"  person="Abdurrahman Ercan" width="width" personLink="https://www.linkedin.com/in/abdurrahman-ercan/"/>
+      
+      <WorksCard title="impladent" img="/impladent.png" workLink="https://impladent.com.tr/"  person="Abdurrahman Ercan" width="width" personLink="https://www.linkedin.com/in/abdurrahman-ercan/"/>
+      <WorksCard title="Mab Turkey" img="/mabturkey.png" workLink="https://mabturkey.com/"  person="Abdurrahman Ercan" width="width" personLink="https://www.linkedin.com/in/abdurrahman-ercan/"/>
+      
+      <WorksCard title="tecclinic" img="/tekclinic.png" workLink="https://tekclinic.com.tr/" person="Abdurrahman Ercan" width="width" personLink="https://www.linkedin.com/in/abdurrahman-ercan/" />
+
+      
+    </div>
+
+    
+
+  </Fragment>
+</PageLayout>
+
+<style lang="scss">
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+</style>

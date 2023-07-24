@@ -1,0 +1,57 @@
+---
+type Props = {
+  title: string,
+  person?: string,
+  img: string,
+  personLink?: string
+  workLink: string,
+  width?: string
+}
+const { title, img, person, personLink, workLink, width } = Astro.props;
+---
+
+<div class="card">
+  <img src={img} alt="2018-01-01-1.jpg" />
+  <div class="card-info">
+    <a href={workLink} class="title">{title}</a>
+    <div class="desc"><span class="desc-w">{width}</span> <a href={personLink}>{person} </a></a></div>
+  </div>
+</div>
+
+<style lang="scss">
+  .card {
+    display: inline-block;
+    border: 1px solid rgba(96, 165, 250, .4);
+    border-radius: 1rem;
+    transition: all .3s ease;
+    min-height: 325px;
+    &:hover {
+      transform: scale(1.1);
+    border: 1px solid rgba(96, 165, 250, .8);
+
+    }
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+      border-bottom: 1px solid rgba(96, 165, 250, .4);
+
+    }
+    &-info {
+      padding: 1rem;
+      .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .desc {
+        font-size: 1.1rem;
+        font-weight: 300;
+        .desc-w {
+          font-weight: bold;
+          color: rgba(#fff, .5);
+        }
+      }
+    }
+  }  
+</style>
