@@ -150,17 +150,6 @@
         border: 1px solid theme('colors.border.code');
         margin-bottom: 1.25em;
     }
-    code.repo {
-        background-color: rgba(var(--color-primary-blue) / 1) !important;
-        color:  rgba(var(--tw-gradient-to )/1) !important;
-        
-    }
-    code.repo a {
-        background-image: none !important;
-    }
-    code.repo a:hover {
-        color: blue;
-    }
 
     html.dark code:not(pre code) {
         background-color: rgb(var(--color-bg-code) / 0.15);
