@@ -22,7 +22,7 @@
   </div>
 </footer>
 
-<style>
+<style lang="scss">
   footer {
     grid-area: footer;
     text-align: center;
@@ -30,6 +30,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include bp(mobile){
+      position: relative;
+      .text-center {
+        position: absolute;
+        top: -35px;
+      }
+    }
   }
 
   .gradient-link {

@@ -36,4 +36,14 @@ export default defineConfig({
       config: { applyBaseStyles: false },
     }),
   ],
+  vite: {
+    css: {
+      devSourcemap: true,
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "/src/styles/config/_mixins.scss";',
+        },
+      },
+    },
+  },
 });

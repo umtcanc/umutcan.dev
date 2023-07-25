@@ -35,6 +35,7 @@ import DarkModeToggle from "./DarkModeToggle.astro";
   </div>
 </header>
 <style lang="scss">
+
   header {
     display: flex;
     align-items: center;
@@ -42,17 +43,33 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     position: fixed;
     width: 100%;
     margin-left: -2rem;
+    @include bp(mobile) {
+      margin-left: 0;
+      width: inherit;
+    
+    }
+    
+
     &.sticky-header{
       background: rgb(var(--color-header-bg) / .35);
       z-index: 100;
       border-radius: 5px;
       width: 100%;
+      @include bp(mobile) {
+        border-radius: 0;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: -1.5rem ;
+        background: rgb(var(--color-header-bg) / 1);
+
+      }
       a {
         color:var(--color-header)!important;
       }
       :global(.text-text-bold){
         color:  var(--color-header);      
       }
+
    }
   }
 </style>
