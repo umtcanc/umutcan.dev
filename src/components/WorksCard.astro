@@ -25,6 +25,8 @@ const { title, img, person, personLink, workLink, width } = Astro.props;
     border-radius: 1rem;
     transition: all .3s ease;
     min-height: 325px;
+    background-color: rgba(var(--color-header-bg )/.1);
+
     &:hover {
       transform: scale(1.1);
     border: 1px solid rgba(96, 165, 250, .8);
@@ -49,9 +51,10 @@ const { title, img, person, personLink, workLink, width } = Astro.props;
         font-weight: 300;
         .desc-w {
           font-weight: bold;
-          color: rgba(#fff, .5);
+          color: rgba(var(--tw-gradient-to )/1);
         }
       }
     }
   }  
+  
 </style>

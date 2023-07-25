@@ -3,7 +3,7 @@ import Nav from "./Nav.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
 ---
 
-<header class="">
+<header class="max-w-3xl sm:px-8">
   
   <Nav />
   <div
@@ -30,17 +30,46 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     >
       <span>Linkedin</span>
     </a>
-  </div>
   <DarkModeToggle />
+
+  </div>
 </header>
-<style>
+<style lang="scss">
   header {
-    grid-area: header;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(
-        0,
-        max-content
-      );
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    margin-left: -2rem;
+    &.sticky-header{
+      background: rgb(var(--color-header-bg) / .35);
+      z-index: 100;
+      border-radius: 5px;
+      width: 100%;
+      a {
+        color:var(--color-header)!important;
+      }
+      :global(.text-text-bold){
+        color:  var(--color-header);      
+      }
+   }
   }
 </style>
+
+<script>
+  // Scroll olayını dinleyen bir fonksiyon tanımlayın
+  window.addEventListener("scroll", function() {
+      var header = document.querySelector("header"); // Header elementini seçin
+
+      // Sayfa scroll pozisyonunu alın
+      var scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Scroll pozisyonuna göre header'a class ekleyin veya çıkarın
+      if (scrollPosition > 0) {
+          header.classList.add("sticky-header"); // Class ekle
+      } else {
+          header.classList.remove("sticky-header"); // Class çıkar
+      }
+  });
+</script>
