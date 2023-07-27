@@ -14,11 +14,12 @@ import HeaderLink from "./HeaderLink.astro";
       </ul>
     </section>
   </nav>
-  <nav class="md:hidden">
+  <nav class="md:hidden ds-fl">
     <button id="mobile-menu-open">
-      <i class="fa-solid fa-bars" aria-hidden="true" title="Open mobile menu"
-      ></i>
-      <span class="fa-sr-only">Open mobile menu</span>
+      <span></span>
+      <span></span>
+      <span></span>
+
     </button>
     <section
       id="mobile-menu"
@@ -26,11 +27,9 @@ import HeaderLink from "./HeaderLink.astro";
     >
       <div class="bg-bg-body w-[75%] h-full drop-shadow-2xl">
         <button id="mobile-menu-close" class="px-6 h-[5rem] text-lg xml-[1px]">
-          <i
-            class="fa-solid fa-xmark"
-            aria-hidden="true"
-            title="Close mobile menu"></i>
-          <span class="fa-sr-only">Close mobile menu</span>
+          <span></span>
+          <span></span>
+
         </button>
         <ul class="unset flex flex-col text-text-bold gap-4 [&>li]:p-0 px-6">
           <li><HeaderLink href="/">Home</HeaderLink></li>
@@ -62,11 +61,50 @@ import HeaderLink from "./HeaderLink.astro";
 </script>
 
 <style lang="scss">
+  .ds-fl {
+    display: flex;
+  }
   .hide-menu {
     transform: translateX(-100%);
   }
   .show-menu {
     transform: translateX(0%);
+  }
+  #mobile-menu-open{
+    span{
+      display: none;
+      width: 2rem;
+      height: 2px;
+      background-color: #fff;
+      margin: 0.5rem 0;
+      @include bp(mobile){
+        display: block;
+      }
+    }
+  }
+  #mobile-menu-close{
+    position: relative;
+    margin-left: 1.5rem;
+    span{
+      display: none;
+      width: 2rem;
+      height: 2px;
+      background-color: #fff;
+      margin: 0.5rem 0;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      @include bp(mobile){
+        display: block;
+      }
+      &:nth-child(1){
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2){ 
+        transform: rotate(45deg);
+
+      }
+    }
   }
  
  
