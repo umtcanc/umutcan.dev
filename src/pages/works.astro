@@ -3,6 +3,7 @@ import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import { SITE_TITLE } from "../config";
 import WorksCard from "src/components/WorksCard.astro";
+import ProjectCard from "src/components/ProjectCard.astro";
 ---
 
 <PageLayout>
@@ -13,18 +14,15 @@ import WorksCard from "src/components/WorksCard.astro";
         class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
       >
         <span
-          class="
-              bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-              from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-          "
+          class="bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%] from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue"
         >
-          Yaptığımız İşlerden Bazıları
+          portfolio
         </span>
       </h1>
       <!-- <p class="text-2xl pb-4">Web Developer. OSS Wizard. Blogger.</p> -->
     </div>
     <div class="works-grid">
-      <WorksCard title="TURKISH TECHNOLOGY"  img="/tt-web.png" workLink="https://turkishtechnology.com/" width="with" person="Muhammet Celepci" personLink="https://www.linkedin.com/in/mcelepci/"/>
+      <!-- <WorksCard title="TURKISH TECHNOLOGY"  img="/tt-web.png" workLink="https://turkishtechnology.com/" width="with" person="Muhammet Celepci" personLink="https://www.linkedin.com/in/mcelepci/"/>
       <WorksCard title="TURKISH TECHNOLOGY CAREERS" img="/tt-career.png" workLink="https://careers.turkishtechnology.com/" width="with" person="Muhammet Celepci" personLink="https://www.linkedin.com/in/mcelepci/"/>
       <WorksCard title="Nokta Global" img="/noktaglobal.png" workLink="https://noktaglobal.com/"  />
       <WorksCard title="Nokta Homes" img="/noktahomes.png" workLink="https://noktahomes.com/"  />
@@ -34,25 +32,111 @@ import WorksCard from "src/components/WorksCard.astro";
       <WorksCard title="impladent" img="/impladent.png" workLink="https://impladent.com.tr/"  person="Abdurrahman Ercan" width="with" personLink="https://www.linkedin.com/in/abdurrahman-ercan/"/>
       <WorksCard title="Mab Turkey" img="/mabturkey.png" workLink="https://mabturkey.com/"  person="Abdurrahman Ercan" width="with" personLink="https://www.linkedin.com/in/abdurrahman-ercan/"/>
       
-      <WorksCard title="tekclinic" img="/tekclinic.png" workLink="https://tekclinic.com.tr/" person="Abdurrahman Ercan" width="with" personLink="https://www.linkedin.com/in/abdurrahman-ercan/" />
+      <WorksCard title="tekclinic" img="/tekclinic.png" workLink="https://tekclinic.com.tr/" person="Abdurrahman Ercan" width="with" personLink="https://www.linkedin.com/in/abdurrahman-ercan/" /> -->
+      <ProjectCard
+        img="/wissentech.png"
+        title="wissen tech"
+        color="#000b1e"
+        colorText="#003698"
+        link="https://www.wissentech.com.tr/"
+        description="a nextjs project."
+      />
 
-      
+      <ProjectCard
+        img="/yurtlarburada.png"
+        title="yurtlar burada"
+        color="#073f31"
+        colorText="#17d3a5"
+        link="https://www.yurtlarburada.com/"
+        description="a nextjs project."
+      />
+
+      <ProjectCard
+        img="/tt-web.png"
+        title="turkish technology"
+        color="#140B22"
+        link="https://turkishtechnology.com/"
+        colorText="white"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/tt-career.png"
+        title="turkish technology careers"
+        color="#640708"
+        colorText="#ce2527"
+        link="https://careers.turkishtechnology.com/"
+        description="a pug project."
+      />
+
+      <ProjectCard
+        img="/vpc.png"
+        title="my three dogs"
+        color="#002d39"
+        colorText="#80969c"
+        link="https://mythreedogs.com/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/crea.png"
+        title="crea"
+        color="#081c33"
+        colorText="#278eff"
+        link="https://creainc.us/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/impladent.png"
+        title="impladent"
+        color="#2f4104"
+        colorText="#9DD80E"
+        link="https://impladent.com.tr/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/mabturkey.png"
+        title="mab turkey"
+        color="#662f0c"
+        colorText="#ff751d"
+        link="https://mabturkey.com/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/tekclinic.png"
+        title="tekclinic"
+        color="#00343a"
+        colorText="#00adc1"
+        link="https://tekclinic.com.tr/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/noktaglobal.png"
+        title="nokta global"
+        color="#293D47"
+        colorText="#7B9CAD"
+        link="https://noktaglobal.com/"
+        description="a pug project."
+      />
+      <ProjectCard
+        img="/noktahomes.png"
+        title="nokta homes"
+        color="#01161b"
+        colorText="#67929b"
+        link="https://noktahomes.com/"
+        description="a pug project."
+      />
     </div>
-
-    
-
   </Fragment>
 </PageLayout>
 
-<style lang="scss">
+<!-- <style lang="scss">
   .works-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    @include bp(mobile){
-      grid-template-columns: repeat(1, 1fr);
-      padding-bottom: 3rem;
-      gap: 2rem
-    }
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 3rem;
+    // @include bp(mobile){
+    //   grid-template-columns: repeat(1, 1fr);
+    //   padding-bottom: 3rem;
+    //   gap: 2rem
+    // }
   }
-</style>
+</style> -->
