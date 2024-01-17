@@ -46,7 +46,7 @@
 
         --color-header:#000;
         --color-header-bg: 255 222 105;
-
+        --card-bg:#e6e6e6;
     }
 
     /* dark theme */
@@ -86,8 +86,12 @@
 
         --color-header:#fff;
         --color-header-bg:  59 130 246;
+        --card-bg: #fff !important;
 
+    }
 
+    .bg-white {
+        background: var(--card-bg) !important;
     }
 
     :root {

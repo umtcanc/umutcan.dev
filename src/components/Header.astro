@@ -16,13 +16,13 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     >
       <span>GitHub</span>
     </a>
-    <a
+    <!-- <a
       class="unset ml-4 rounded-sm transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] hover:bg-[length:100%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue"
       href="https://twitter.com/Umtcanc"
       target="_blank"
     >
       <span>Twitter</span>
-    </a>
+    </a> -->
     <a
       class="unset ml-4 rounded-sm transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] hover:bg-[length:100%_55%] bg-no-repeat bg-gradient-to-r from-primary-green to-primary-blue dark:bg-none dark:hover:text-primary-green"
       href="https://linkedin.com/in/umtcanc"
@@ -52,31 +52,34 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     }
     
 
-  //   &.sticky-header{
-  //     background: rgb(var(--color-header-bg) / .35);
-  //     z-index: 100;
-  //     border-radius:0 0 5px 5px;
-  //     width: 100%;
-  //     // outline: 1px solid rgba(#fff, .4);
-  //     border-top: none;
-  //     border: none;
-  //     @include bp(mobile) {
-  //       border-radius: 0;
-  //       border: none;
-  //       padding-left: 1.5rem;
-  //       padding-right: 1.5rem;
-  //       margin-left: -1.5rem ;
-  //       background: rgb(var(--color-header-bg) / 1);
+    &.sticky-header{
+      background: rgb(var(--color-header-bg) / .35);
+      z-index: 100;
+      border-radius:0 0 5px 5px;
+      // margin: 0 auto;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+      backdrop-filter: blur(12px);
+      // outline: 1px solid rgba(#fff, .4);
+      border-top: none;
+      border: none;
+      top: .75rem;
+      // @include bp(mobile) {
+      //   border-radius: 0;
+      //   border: none;
+      //   padding-left: 1.5rem;
+      //   padding-right: 1.5rem;
+      //   margin-left: -1.5rem ;
+      //   background: rgb(var(--color-header-bg) / 1);
 
-  //     }
-  //     a {
-  //       color:var(--color-header)!important;
-  //     }
-  //     :global(.text-text-bold){
-  //       color:  var(--color-header);      
-  //     }
+      // }
+      a {
+        color:var(--color-header)!important;
+      }
+      :global(.text-text-bold){
+        color:  var(--color-header);      
+      }
 
-  //  }
+   }
   }
 </style>
 

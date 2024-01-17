@@ -15,6 +15,12 @@ import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+type Props = {
+  bodyClass?: string;
+};
+
+const props = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -33,7 +39,7 @@ import Footer from "../components/Footer.astro";
   </head>
 
   <body
-    class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8"
+    class={`max-w-3xl mx-auto min-h-screen px-6 sm:px-8 ${props.bodyClass}`}
   >
     <Header />
     <main id="main">
@@ -50,6 +56,12 @@ import Footer from "../components/Footer.astro";
         grid-template-rows: 5rem minmax(0, 1fr) 5rem;
         grid-template-columns: minmax(0, 1fr);
       }
+
+      /* body.bigBody {
+        width: 100% !important;
+        max-width: 80rem;
+      } */
+
       main {
         grid-area: main;
       }

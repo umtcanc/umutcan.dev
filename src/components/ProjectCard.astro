@@ -12,6 +12,7 @@ const props = Astro.props as Card;
 ---
 
 <a href={props.link} target="_blank" class="card">
+  
   <h2 style={`color: ${props.colorText}`}>{props.title}</h2>
   <i class="fas fa-arrow-right"></i>
   <p>
@@ -104,7 +105,7 @@ const props = Astro.props as Card;
 
     .pic {
       z-index: 100;
-      width: 85%;
+      width: 95%;
       height: 100%;
       background-size: 100% 100%;
       filter: grayscale(60%);
