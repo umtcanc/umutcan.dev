@@ -1,11 +1,49 @@
 ---
 import Nav from "./Nav.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
+
+type Header = {
+  lang: string;
+};
+
+const props = Astro.props as Header;
 ---
 
 <header class="max-w-3xl sm:px-8">
-  
-  <Nav />
+  <Nav lang={props.lang} />
+
+  <div class="lang">
+    <a
+      class={`unset ${props.lang === "tr" ? "" : " grayscale"} `}
+      href="/tr"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -30000 90000 60000"
+      >
+        <path fill="#e30a17" d="m0-30000h90000v60000H0z"></path>
+        <path
+          fill="#fff"
+          d="m41750 0 13568-4408-8386 11541V-7133l8386 11541zm925 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"
+        ></path>
+      </svg>
+    </a>
+    <a
+      class={`unset ${props.lang !== "tr" ? "" : " grayscale"} `}
+      href="/"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" >
+      <clipPath id="t">
+        <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z"/>
+      </clipPath>
+      <path d="M0,0v30h50v-30z" fill="#012169"/>
+      <path d="M0,0 50,30M50,0 0,30" stroke="#fff" stroke-width="6"/>
+      <path d="M0,0 50,30M50,0 0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+      <path d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z" fill="#C8102E" stroke="#FFF" stroke-width="2"/>
+    </svg>
+    </a>
+  </div>
+
   <div
     class="justify-self-end py-2 flex items-center content-center text-text-bold"
   >
@@ -30,12 +68,10 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     >
       <span>Linkedin</span>
     </a>
-  <DarkModeToggle />
-
+    <DarkModeToggle />
   </div>
 </header>
 <style lang="scss">
-
   header {
     display: flex;
     align-items: center;
@@ -45,24 +81,22 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     margin-left: -2rem;
     @include bp(mobile) {
       padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        margin-left: -1.5rem ;
-      
-    
+      padding-right: 1.5rem;
+      margin-left: -1.5rem;
     }
-    
 
-    &.sticky-header{
-      background: rgb(var(--color-header-bg) / .35);
+    &.sticky-header {
+      background: rgb(var(--color-header-bg) / 0.35);
       z-index: 100;
-      border-radius:0 0 5px 5px;
+      border-radius: 0 0 5px 5px;
       // margin: 0 auto;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(12px);
       // outline: 1px solid rgba(#fff, .4);
       border-top: none;
       border: none;
-      top: .75rem;
+      top: 0.75rem;
       // @include bp(mobile) {
       //   border-radius: 0;
       //   border: none;
@@ -73,29 +107,51 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
       // }
       a {
-        color:var(--color-header)!important;
+        color: var(--color-header) !important;
       }
-      :global(.text-text-bold){
-        color:  var(--color-header);      
+      :global(.text-text-bold) {
+        color: var(--color-header);
       }
 
-   }
+      @include bp(mobile) {
+        backdrop-filter: none !important;
+      }
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @include bp(mobile){
+      display: none;
+    }
+
+    svg {
+      height: 1.2em;
+      width: 1.2em;
+    }
   }
 </style>
 
 <script>
   // Scroll olayını dinleyen bir fonksiyon tanımlayın
-  window.addEventListener("scroll", function() {
-      var header = document.querySelector("header"); // Header elementini seçin
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("header"); // Header elementini seçin
 
-      // Sayfa scroll pozisyonunu alın
-      var scrollPosition = window.scrollY || window.pageYOffset;
+    // Sayfa scroll pozisyonunu alın
+    var scrollPosition = window.scrollY || window.pageYOffset;
 
-      // Scroll pozisyonuna göre header'a class ekleyin veya çıkarın
-      if (scrollPosition > 0) {
-          header.classList.add("sticky-header"); // Class ekle
-      } else {
-          header.classList.remove("sticky-header"); // Class çıkar
-      }
+    // Scroll pozisyonuna göre header'a class ekleyin veya çıkarın
+    if (scrollPosition > 0) {
+      header.classList.add("sticky-header"); // Class ekle
+    } else {
+      header.classList.remove("sticky-header"); // Class çıkar
+    }
   });
 </script>

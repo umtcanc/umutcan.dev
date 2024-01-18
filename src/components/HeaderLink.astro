@@ -16,11 +16,12 @@ const isActive = isHome || isOtherPages
   href={href}
   class:list={[
     className,
-    { "show": isActive },
+    { "show": (href === '/' && path === '') || (href !== '/' && path.startsWith(href)) },
     "unset animated-link",
   ]}
   {...props}
 ><slot /></a>
+
 
 <style lang="scss">
   

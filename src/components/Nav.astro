@@ -1,46 +1,110 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+type Nav = {
+  lang: string;
+};
+
+const props = Astro.props as Nav;
 ---
 
 <Fragment>
   <nav class="hidden md:inline">
     <section class="text-text-bold">
-      <ul class="unset flex gap-4 [&>li]:p-0">
-        <li><HeaderLink href="/">Home</HeaderLink></li>
-        <li><HeaderLink href="/works">Works</HeaderLink></li>
+
+      {props.lang === "tr" ? (
+      <ul class="unset flex gap-4 [&>li]:p-0 ">
+        <li><HeaderLink href="/tr">Anasayfa</HeaderLink></li>
+        <li><HeaderLink href="/tr/portfolyo">Portfolyo</HeaderLink></li>
+
 
         <!-- <li><HeaderLink href="/blog">Blog</HeaderLink></li>
         <li><HeaderLink href="/projects">Projects</HeaderLink></li> -->
       </ul>
+      ) : (
+      <ul class="unset flex gap-4 [&>li]:p-0 ">
+        <li><HeaderLink href="/">Home</HeaderLink></li>
+        <li><HeaderLink href="/portfolio">Portfolio</HeaderLink></li>
+
+        <!-- <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+        <li><HeaderLink href="/projects">Projects</HeaderLink></li> -->
+      </ul>
+      )}
+
+
+      
+     
     </section>
   </nav>
-  <nav class="md:hidden ds-fl">
+  <nav class="md:hidden flex">
     <button id="mobile-menu-open">
       <span></span>
       <span></span>
       <span></span>
 
     </button>
-    <section
-      id="mobile-menu"
-      class="hide-menu fixed top-0 left-0 z-10 w-full h-full transition-transform bg-black/75 md:hidden border-primary-blue"
-    >
-      <div class="bg-bg-body w-[75%] h-full drop-shadow-2xl">
-        <button id="mobile-menu-close" class="px-6 h-[5rem] text-lg xml-[1px]">
-          <span></span>
-          <span></span>
-
-        </button>
-        <ul class="unset flex flex-col text-text-bold gap-4 [&>li]:p-0 px-6">
-          <li><HeaderLink href="/">Home</HeaderLink></li>
-          <li><HeaderLink href="/works">Works</HeaderLink></li>
-
-          <!-- <li><HeaderLink href="/blog">Blog</HeaderLink></li>
-          <li><HeaderLink href="/projects">Projects</HeaderLink></li> -->
-        </ul>
-      </div>
-    </section>
+  
   </nav>
+  <section
+  id="mobile-menu"
+  class="hide-menu fixed top-0 left-0 z-10 w-full h-full transition-transform bg-black/75 md:hidden border-primary-blue"
+>
+  <div class="bg-bg-body w-[75%] h-full drop-shadow-2xl">
+    <button id="mobile-menu-close" class="px-6 h-[5rem] text-lg xml-[1px]">
+      <span></span>
+      <span></span>
+
+    </button>
+    
+    {props.lang === "tr" ? (
+      <ul class="unset flex flex-col items-center justify-center gap-4 [&>li]:p-0 ">
+      <li><HeaderLink href="/tr">Anasayfa</HeaderLink></li>
+      <li><HeaderLink href="/tr/portfolyo">Portfolyo</HeaderLink></li>
+      <!-- <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+      <li><HeaderLink href="/projects">Projects</HeaderLink></li> -->
+    </ul>
+    ) : (
+      <ul class="unset flex flex-col items-center justify-center gap-4 [&>li]:p-0 ">
+      <li><HeaderLink href="/">Home</HeaderLink></li>
+      <li><HeaderLink href="/portfolio">Portfolio</HeaderLink></li>
+      <!-- <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+      <li><HeaderLink href="/projects">Projects</HeaderLink></li> -->
+    </ul>
+    )}
+
+    <div class="lang">
+      <a
+        class={`unset ${props.lang === "tr" ? "" : " grayscale"} `}
+        href="/tr"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -30000 90000 60000"
+        >
+          <path fill="#e30a17" d="m0-30000h90000v60000H0z"></path>
+          <path
+            fill="#fff"
+            d="m41750 0 13568-4408-8386 11541V-7133l8386 11541zm925 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"
+          ></path>
+        </svg>
+      </a>
+      <a
+        class={`unset ${props.lang !== "tr" ? "" : " grayscale"} `}
+        href="/"
+      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" >
+        <clipPath id="t">
+          <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z"/>
+        </clipPath>
+        <path d="M0,0v30h50v-30z" fill="#012169"/>
+        <path d="M0,0 50,30M50,0 0,30" stroke="#fff" stroke-width="6"/>
+        <path d="M0,0 50,30M50,0 0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+        <path d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z" fill="#C8102E" stroke="#FFF" stroke-width="2"/>
+      </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
 </Fragment>
 
 <script>
@@ -61,8 +125,25 @@ import HeaderLink from "./HeaderLink.astro";
 </script>
 
 <style lang="scss">
-  .ds-fl {
+  // .ds-fl {
+  //   display: flex;
+  // }
+
+  .lang {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+   
+
+    svg {
+      height: 1.5em;
+      width: 1.5em;
+    }
   }
   .hide-menu {
     transform: translateX(-100%);
@@ -70,6 +151,9 @@ import HeaderLink from "./HeaderLink.astro";
   .show-menu {
     transform: translateX(0%);
   }
+
+ 
+
   #mobile-menu-open{
     span{
       display: none;

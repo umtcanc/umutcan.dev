@@ -90,6 +90,10 @@
 
     }
 
+    .light#mobile-menu-open span{
+            background-color: #000 !important;
+      }
+
     .bg-white {
         background: var(--card-bg) !important;
     }

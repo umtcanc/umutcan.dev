@@ -1,0 +1,488 @@
+---
+import PageMeta from "../../components/PageMeta.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { SITE_TITLE } from "../../config";
+
+---
+
+<PageLayout bodyClass="bigBody" lang="tr">
+  <PageMeta title={`${SITE_TITLE} | Portfolyo  `} slot="meta" />
+  <Fragment slot="main">
+    <div class="mb-6">
+      <h1
+        class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
+      >
+        <span
+          class="bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%] from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue"
+        >
+        portfolyo
+        </span>
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid gap-4  place-content-start">
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://www.wissentech.com.tr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/wissentech.png"
+              alt="wissen tech"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>wissen tech</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >wissentech.com</span
+            ><span class="line-clamp-6 text-sm"
+              >Wissen Technology Nitelikli Eğitim, İnsan Kaynakları ve Teknoloji
+              Çözümleri</span
+            >
+          </div></a
+        >
+
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://careers.turkishtechnology.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/tt-career.png"
+              alt="Hi, I'm Rishi Mohan!"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>turkish technology careers</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >
+              careers.turkishtechnology.com
+            </span><span class="line-clamp-6 text-sm"
+              >we're here for those who aim for the sky in their careers</span
+            >
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://noktaglobal.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/noktaglobal.png"
+              alt="Nokta Global"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>nokta global</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >
+              noktaglobal.com
+            </span><span class="line-clamp-6 text-sm">
+              Türkiye'nin en güzel şehirlerinden biri olan Fethiye'de inşaat,
+              yatırım ve gayrimenkul alanlarında 20 yıllık tecrübeye sahibiz.
+            </span>
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://creainc.us/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/crea.png"
+              alt="crea"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>crea</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >creainc.us</span
+            ><span class="line-clamp-6 text-sm"
+              >Absolutepeace of mind for product and software development</span
+            >
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://impladent.com.tr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/impladent.png"
+              alt="impladent"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>impladent</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >impladent.com.tr</span
+            ><span class="line-clamp-6 text-sm"
+              >25 yıldır kurduğumuz bağlarımızın kıymetinin farkındayız</span
+            >
+          </div></a
+        >
+      </div>
+      <div class="grid gap-4  place-content-start">
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://turkishtechnology.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/tt-web.png"
+              alt="turkishtechnology"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>turkish technology</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >turkishtechnology.com</span
+            ><span class="line-clamp-6 text-sm"
+              >we develop technologies inspired by the sky.
+            </span>
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://www.yurtlarburada.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/yurtlarburada.png"
+              alt="yurtlar burada"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>yurtlar burada</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >yurtlarburada.com</span
+            ><span class="line-clamp-6 text-sm"
+              >Aradığın Bütün Yurtlar Burada!</span
+            >
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://mythreedogs.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/vpc.png"
+              alt="my three dogs"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>my three dogs</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >mythreedogs.com</span
+            ><span class="line-clamp-6 text-sm"
+              >The Best for Your Dog at the Best of Charleston</span
+            >
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://noktahomes.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/noktahomes.png"
+              alt="Nokta Homes"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>nokta homes</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >
+              noktahomes.com
+            </span><span class="line-clamp-6 text-sm"
+              >We are here to make a dream come true</span
+            >
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://tekclinic.com.tr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/tekclinic.png"
+              alt="Tek Clinic"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>tek clinic</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >tekclinic.com</span
+            ><span class="line-clamp-6 text-sm">gülüşünüze tek dokunuş</span>
+          </div></a
+        >
+        <a
+          class="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+          href="https://mabturkey.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="aspect-[1200/630] overflow-hidden rounded-lg"
+            ><img
+              src="/mabturkey.png"
+              alt="mab turkey"
+              width="1200"
+              height="630"
+              loading="lazy"
+              class="aspect-[1200/630] animate-reveal rounded-lg border  bg-cover bg-center bg-no-repeat object-cover"
+            /></span
+          ><div class="flex flex-col gap-1">
+            <h3>mab turkey</h3><span
+              class="line-clamp-5 inline-flex items-center gap-1 text-sm text-gray-500"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-link2"
+                ><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path
+                  d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line
+                  x1="8"
+                  x2="16"
+                  y1="12"
+                  y2="12"></line></svg
+              >mabturkey.com</span
+            ><span class="line-clamp-6 text-sm">Feel at home...</span>
+          </div></a
+        >
+      </div>
+    </div>
+  </Fragment>
+</PageLayout>
+
+<style lang="scss">
+  .works-grid {
+    @include bp(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 3rem;
+      gap: 1rem;
+    }
+  }
+
+  :global(main) {
+    padding-bottom: 2rem !important;
+  }
+
+
+</style>

@@ -8,6 +8,8 @@
 
 // Import the global.css file here so that it is included on
 import "../styles/global.css";
+import "../styles/global.scss";
+
 
 import GoogleFont from "./GoogleFont.astro";
 import FontAwesome from "./FontAwesome.astro";
@@ -18,6 +20,7 @@ import Footer from "../components/Footer.astro";
 
 type Props = {
   bodyClass?: string;
+  lang?: string;
 };
 
 const props = Astro.props as Props;
@@ -41,11 +44,11 @@ const props = Astro.props as Props;
   <body
     class={`max-w-3xl mx-auto min-h-screen px-6 sm:px-8 ${props.bodyClass}`}
   >
-    <Header />
+    <Header lang={props.lang} />
     <main id="main">
       <slot name="main" />
     </main>
-    <Footer />
+    <Footer lang={props.lang} />
     <style>
       body {
         display: grid;

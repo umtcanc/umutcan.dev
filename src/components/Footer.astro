@@ -1,25 +1,75 @@
 ---
+type Footer = {
+  lang: string;
+};
+
+const props = Astro.props as Footer;
 ---
 
-<footer class="text-sm leading-[1.75] mt-4">
-  <p class="text-center whitespace-nowrap overflow-auto">
-    <a href="https://github.com/umtcanc/mywebsite/issues/" target="_blank">Repoyu Görüntüle </a> 
-  </p>
-  <div>
-    Bu blog
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605] hover:after:bg-gradient-to-r hover:after:from-[#f57111] hover:after:to-[#f79605]"
-      href={"https://astro.build"}
-      target="_blank"
-    >
-      Astro Js</a> kullanılarak oluşturulmuştur ve
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff]"
-      href={"https://vercel.com"}
-      target="_blank"
-    >
-      Vercel</a> ile yayınlanmaktadır.
-  </div>
+<footer class="text-sm leading-[1.75] mt-4 english">
+  {
+    props.lang === "tr" ? (
+      <>
+        <p class="text-center whitespace-nowrap overflow-auto">
+          <a
+            href="https://github.com/umtcanc/mywebsite/issues/"
+            target="_blank"
+          >
+            Repoyu Görüntüle
+          </a>
+        </p>
+        <div>
+          Bu blog{" "}
+          <a
+            class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605] hover:after:bg-gradient-to-r hover:after:from-[#f57111] hover:after:to-[#f79605]"
+            href={"https://astro.build"}
+            target="_blank"
+          >
+            Astro Js
+          </a>{" "}
+          kullanılarak oluşturulmuştur ve{" "}
+          <a
+            class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff]"
+            href={"https://vercel.com"}
+            target="_blank"
+          >
+            Vercel
+          </a>{" "}
+          ile yayınlanmaktadır.
+        </div>
+      </>
+    ) : (
+      <>
+        <p class="text-center whitespace-nowrap overflow-auto">
+          <a
+            href="https://github.com/umtcanc/mywebsite/issues/"
+            target="_blank"
+          >
+            View Repositories
+          </a>
+        </p>
+        <div>
+          This blog is created using{" "}
+          <a
+            class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605] hover:after:bg-gradient-to-r hover:after:from-[#f57111] hover:after:to-[#f79605]"
+            href={"https://astro.build"}
+            target="_blank"
+          >
+            Astro Js
+          </a>{" "}
+          and hosted with{" "}
+          <a
+            class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff]"
+            href={"https://vercel.com"}
+            target="_blank"
+          >
+            Vercel
+          </a>
+          .
+        </div>
+      </>
+    )
+  }
 </footer>
 
 <style lang="scss">
@@ -30,7 +80,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include bp(mobile){
+    @include bp(mobile) {
       position: relative;
       .text-center {
         position: absolute;
