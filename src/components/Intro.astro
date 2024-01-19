@@ -8,8 +8,12 @@ const props = Astro.props as Intro;
 
 <section class="mb-8">
   <div class="mb-6">
-    <h1 class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden">
-      <span class="bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%] from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue">
+    <h1
+      class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
+    >
+      <span
+        class="bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%] from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue"
+      >
         {props.lang === "tr" ? "Merhaba Dünyalı" : "Hello Earthling"}
       </span>
       👋
@@ -18,35 +22,68 @@ const props = Astro.props as Intro;
 
   <div>
     <p class="mb-5" style={{ textAlign: "justify" }}>
-      {props.lang === "tr" ? (
-        <>
-          Ben <strong>Umutcan Coşkun.</strong> 24 yaşındayım, Sakarya'da yaşıyorum. Renkli bir kişiliğim var ve bunu yaptığım işlere yansıtmayı seviyorum. Özenli ve programlı çalışmayı, insanlarla iletişim halinde olmayı seven birisiyim. Bu zamana kadar pek çok sektörde, çeşiti konumlarda görevler aldım. Aktif olarak iki seneyi aşkın süredir de{" "}
-          <a href="https://pixelatecreative.com/" target="_blank"><strong>Pixelate Creative</strong></a> 'de Front-end Geliştirici olarak çalışmaktayım.
-        </>
-      ) : (
-        <>
-          I'm <strong>Umutcan Coşkun.</strong> I am 24 years old and live in Sakarya. I have a vibrant personality and enjoy reflecting it in the work I do. I am a meticulous and organized individual who loves working systematically and being in communication with people. Over time, I have taken on roles in various sectors and positions. Currently, for more than two years, I have been actively working as a Front-end Developer at{" "}
-          <a href="https://pixelatecreative.com/" target="_blank"><strong>Pixelate Creative</strong></a>.
-        </>
-      )}
+      {
+        props.lang === "tr" ? (
+          <>
+            Ben <strong>Umutcan Coşkun.</strong> 24 yaşındayım, Sakarya'da
+            yaşıyorum. Renkli bir kişiliğim var ve bunu yaptığım işlere
+            yansıtmayı seviyorum. Özenli ve programlı çalışmayı, insanlarla
+            iletişim halinde olmayı seven birisiyim. Bu zamana kadar pek çok
+            sektörde, çeşiti konumlarda görevler aldım. Aktif olarak iki seneyi
+            aşkın süredir de{" "}
+            <a href="https://pixelatecreative.com/" target="_blank">
+              <strong>Pixelate Creative</strong>
+            </a>{" "}
+            'de Front-end Geliştirici olarak çalışmaktayım.
+          </>
+        ) : (
+          <>
+            I'm <strong>Umutcan Coşkun.</strong> I am 24 years old and live in
+            Sakarya. I have a vibrant personality and enjoy reflecting it in the
+            work I do. I am a meticulous and organized individual who loves
+            working systematically and being in communication with people. Over
+            time, I have taken on roles in various sectors and positions.
+            Currently, for more than two years, I have been actively working as
+            a Front-end Developer at{" "}
+            <a href="https://pixelatecreative.com/" target="_blank">
+              <strong>Pixelate Creative</strong>
+            </a>
+            .
+          </>
+        )
+      }
     </p>
 
-    <p class="text-center ">
-      {props.lang === "tr" ? (
-        <>
-          İletişime geçmek için: &nbsp;
-          <code class="py-1 px-2">
-            <a href="mailto:umtcancskn@outlook.com" target="_blank">umtcancskn@outlook.com</a></code>
-          <span class="whitespace-nowrap"> &nbsp;mail atman yeterli.</span>
-        </>
-      ) : (
-        <>
-          To get in touch: &nbsp;
-          <code class="py-1 px-2">
-            <a href="mailto:umtcancskn@outlook.com" target="_blank">umtcancskn@outlook.com</a></code>
-          <span class="whitespace-nowrap"> &nbsp;Just send an email.</span>
-        </>
-      )}
+    <p class="text-center">
+      {
+        props.lang === "tr" ? (
+          <>
+            İletişime geçmek için: &nbsp;
+            <code class="py-1 px-2">
+              <a href="mailto:umtcancskn@outlook.com" target="_blank">
+                umtcancskn@outlook.com
+              </a>
+            </code>
+            <span class="whitespace-nowrap">
+              {" "}
+              <br class="br" /> &nbsp;mail atman yeterli.
+            </span>
+          </>
+        ) : (
+          <>
+            To get in touch: &nbsp;
+            <code class="py-1 px-2">
+              <a href="mailto:umtcancskn@outlook.com" target="_blank">
+                umtcancskn@outlook.com
+              </a>
+            </code>
+            <span class="whitespace-nowrap">
+              {" "}
+              <br class="br" /> &nbsp;Just send an email.
+            </span>
+          </>
+        )
+      }
     </p>
 
     <!-- <div class="flex justify-center mt-8">
@@ -56,8 +93,14 @@ const props = Astro.props as Intro;
     </div> -->
 
     <div class="flex flex-wrap justify-center mt-8">
-      <div class="flex flex-col items-center justify-center w-1/2 md:w-1/3 lg:w-1/4 p-4">
-        <img src="/images/umut.png" alt="Umutcan Coşkun" class="w-32 h-32 rounded-full mb-4" />
+      <div
+        class="flex flex-col items-center justify-center w-1/2 md:w-1/3 lg:w-1/4 p-4"
+      >
+        <img
+          src="/images/umut.png"
+          alt="Umutcan Coşkun"
+          class="w-32 h-32 rounded-full mb-4"
+        />
         <h3 class="text-xl whitespace-nowrap font-bold">Umutcan Coşkun</h3>
         <p class="text-center whitespace-nowrap tracking-wider">
           {props.lang === "tr" ? "Ön-Yüz Geliştirici" : "Frontend Developer"}
@@ -66,3 +109,13 @@ const props = Astro.props as Intro;
     </div>
   </div>
 </section>
+
+<style lang="scss">
+  .br {
+    display: none;
+
+    @include bp(mobile) {
+      display: block;
+    }
+  }
+</style>
