@@ -27,7 +27,7 @@ const props = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html class="theme-bubblegum" lang="en">
+<html class="theme-bubblegum light" lang="en">
   <head>
     <!-- Global Metadata -->
     <meta charset="utf-8" />
@@ -48,7 +48,7 @@ const props = Astro.props as Props;
     <main id="main">
       <slot name="main" />
     </main>
-    <Footer lang={props.lang} />
+    <!-- <Footer lang={props.lang} /> -->
     <style>
       body {
         display: grid;

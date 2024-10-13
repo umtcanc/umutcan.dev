@@ -1,6 +1,5 @@
 ---
 import Nav from "./Nav.astro";
-import DarkModeToggle from "./DarkModeToggle.astro";
 
 type Header = {
   lang: string;
@@ -45,15 +44,20 @@ const props = Astro.props as Header;
   </div>
 
   <div
-    class="justify-self-end py-2 flex items-center content-center text-text-bold"
+    class="justify-self-end py-2 flex items-center content-center text-text-bold gap-4"
   >
     <a
-      class="unset ml-4 rounded-sm transition-[background-size] duration-150 ease-in-out bg-left-bottom bg-[length:0%_55%] hover:bg-[length:100%_55%] bg-no-repeat bg-gradient-to-r from-primary-yellow to-primary-yellow dark:bg-none dark:hover:text-primary-yellow"
+    class="link-icon"
+
       href="https://github.com/umtcanc"
       target="_blank"
     >
-      <span>GitHub</span>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" viewBox="0 0 512 512" id="github">
+      <rect width="512" height="512" fill="#1B1817" rx="15%"></rect>
+      <path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"></path>
+    </svg>
     </a>
+   
     <!-- <a
       class="unset ml-4 rounded-sm transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] hover:bg-[length:100%_55%] bg-no-repeat bg-gradient-to-r from-primary-blue to-primary-blue dark:bg-none dark:hover:text-primary-blue"
       href="https://twitter.com/Umtcanc"
@@ -62,13 +66,16 @@ const props = Astro.props as Header;
       <span>Twitter</span>
     </a> -->
     <a
-      class="unset ml-4 rounded-sm transition-[background-size] duration-150 bg-left-bottom bg-[length:0%_55%] hover:bg-[length:100%_55%] bg-no-repeat bg-gradient-to-r from-primary-green to-primary-blue dark:bg-none dark:hover:text-primary-green"
+      class="link-icon"
       href="https://linkedin.com/in/umtcanc"
       target="_blank"
     >
-      <span>Linkedin</span>
+    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 26 26" viewBox="0 0 26 26" id="linkedin">
+      <path d="M24,0H2C0.9,0,0,0.9,0,2v22c0,1.1,0.9,2,2,2h22c1.1,0,2-0.9,2-2V2C26,0.9,25.1,0,24,0z M7.816,22H4V9.725h3.816V22z M5.878,8.219c-1.349,0-2.25-0.956-2.222-2.138C3.628,4.844,4.529,3.915,5.906,3.915c1.379,0,2.251,0.929,2.279,2.166C8.186,7.263,7.286,8.219,5.878,8.219z M22,22h-3.815v-6.802c0-1.582-0.553-2.661-1.934-2.661c-1.053,0-1.681,0.728-1.932,1.431c-0.1,0.226-0.15,0.603-0.15,0.953V22h-3.816v-8.358c0-1.532-0.05-2.837-0.1-3.916h3.313l0.176,1.682h0.076c0.502-0.779,1.757-1.958,3.79-1.958c2.51,0,4.392,1.656,4.392,5.271V22z"></path>
+    </svg>
     </a>
-    <DarkModeToggle />
+
+    <!-- <DarkModeToggle /> -->
   </div>
 </header>
 <style lang="scss">
@@ -79,6 +86,8 @@ const props = Astro.props as Header;
     position: fixed;
     width: 100%;
     margin-left: -2rem;
+    background: white;
+    padding: 0.5rem 0;
     @include bp(mobile) {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
@@ -117,8 +126,10 @@ const props = Astro.props as Header;
         backdrop-filter: none !important;
       }
     }
-  }
 
+   
+  }
+ 
   .lang {
     display: flex;
     align-items: center;
@@ -137,9 +148,16 @@ const props = Astro.props as Header;
       width: 1.2em;
     }
   }
+
+  .link-icon {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
 </style>
 
-<script>
+<!-- <script>
   // Scroll olayını dinleyen bir fonksiyon tanımlayın
   window.addEventListener("scroll", function () {
     var header = document.querySelector("header"); // Header elementini seçin
@@ -154,4 +172,4 @@ const props = Astro.props as Header;
       header.classList.remove("sticky-header"); // Class çıkar
     }
   });
-</script>
+</script> -->

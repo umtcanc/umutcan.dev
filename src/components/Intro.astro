@@ -21,21 +21,32 @@ const props = Astro.props as Intro;
   </div>
 
   <div>
-    <p class="mb-5" style={{ textAlign: "justify" }}>
+    <div class="mb-5" style={{ textAlign: "justify" }}>
       {
         props.lang === "tr" ? (
-          <>
-            Ben <strong>Umutcan Coşkun.</strong> 24 yaşındayım, Sakarya'da
-            yaşıyorum. Renkli bir kişiliğim var ve bunu yaptığım işlere
-            yansıtmayı seviyorum. Özenli ve programlı çalışmayı, insanlarla
-            iletişim halinde olmayı seven birisiyim. Bu zamana kadar pek çok
-            sektörde, çeşiti konumlarda görevler aldım. Aktif olarak iki seneyi
-            aşkın süredir de{" "}
-            <a href="https://pixelatecreative.com/" target="_blank">
-              <strong>Pixelate Creative</strong>
-            </a>{" "}
-            'de Front-end Geliştirici olarak çalışmaktayım.
-          </>
+        <>
+          Ben <strong>Umutcan Coşkun</strong>, &nbsp; 25 yaşındayım ve Sakarya'da yaşıyorum.  
+          <br />
+          Renkli kişiliğimi projelerime yansıtarak yaratıcı ve estetik çözümler sunmayı seviyorum. Özenli ve planlı çalışmayı önemsiyor,&nbsp;insanlarla iletişimde olmayı keyifli buluyorum.  
+          <br />
+          Farklı sektörlerde ve çeşitli pozisyonlarda deneyim kazandıktan sonra, yaklaşık üç yıldır  
+          <a href="https://pixelatecreative.com/" target="_blank">
+            <strong>Pixelate Creative</strong>
+          </a> 
+          bünyesinde <strong>Mid Frontend Developer</strong> olarak görev yapıyorum. 
+          <br /> 
+          Frontend geliştirme süreçlerinde <strong>Astro.js</strong>, <strong>Pug</strong>, <strong>React</strong> ve <strong>Next.js</strong> teknolojilerini kullanıyorum. İçerik yönetimi konusunda ise <strong>WordPress</strong> ve <strong>Directus CMS</strong> ile projeler üretiyorum.  
+          <br/>
+          <br/>
+          <p style="text-align: center;">
+            Yaptığım işlere göz atmak için <a href="/tr/portfolyo">
+            <strong>
+            portfolyo
+            </strong>
+            </a> sayfamı ziyaret edebilirsiniz.
+          </p>
+        </>
+
         ) : (
           <>
             I'm <strong>Umutcan Coşkun.</strong> I am 24 years old and live in
@@ -52,7 +63,7 @@ const props = Astro.props as Intro;
           </>
         )
       }
-    </p>
+    </div>
 
     <p class="text-center">
       {
@@ -61,11 +72,9 @@ const props = Astro.props as Intro;
             İletişime geçmek için: &nbsp;
             <code class="py-1 px-2">
               <a href="mailto:umtcancskn@outlook.com" target="_blank">
-                umtcancskn@outlook.com
-              </a>
+                umtcancskn@outlook.com</a>
             </code>
             <span class="whitespace-nowrap">
-              {" "}
               <br class="br" /> &nbsp;mail atman yeterli.
             </span>
           </>
@@ -78,7 +87,6 @@ const props = Astro.props as Intro;
               </a>
             </code>
             <span class="whitespace-nowrap">
-              {" "}
               <br class="br" /> &nbsp;Just send an email.
             </span>
           </>
